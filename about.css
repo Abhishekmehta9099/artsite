@@ -1,0 +1,418 @@
+*,* ::after, *::before {
+    box-sizing: border-box;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    color: var(--c1--1--);
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* --c1--1--:#1e1e1e; */
+    --c1--1--:#3B1C32;
+    --c1--2--:#ffffff;
+    background: var(--c1--2--);
+}
+
+img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+}
+
+.row {
+    display: flex;
+}
+
+.flex {
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.flex>* {
+    flex: 1 1 30rem;
+}
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/*Navigation*/
+header {
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 2rem; 
+    padding: 1.5rem 0;
+    height: 110px;
+}
+
+.logo img {
+    max-width: 80px; 
+    object-fit: contain;
+}
+
+.toggleMenu {
+    display: none;
+}
+
+nav {
+    align-items: center;
+    gap: 2rem;
+}
+
+nav ul {
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav ul a {
+    position: relative;
+    font-weight: 500;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+}
+
+nav ul a::after {
+    content: "";
+    position: absolute; 
+    Left: 0; 
+    bottom: 0; 
+    right: 0; 
+    width: 100%; 
+    height: 0;
+    background: var(--c1--2--); 
+    z-index: -1; 
+    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out; 
+    -o-transition: 0.5s ease-in-out;
+}
+.nbpage-btn:hover{
+    color: goldenrod;
+}
+
+nav ul a:hover::after {
+    height: 2px;
+}
+
+/*Page Button*/
+.page-btn {
+    cursor: pointer; 
+    font-weight: 500; 
+    font-size: 1.125rem; 
+    text-transform: capitalize; 
+    color: var(--c1--1--);
+    background: var(--c1--2--); 
+    border: 1px solid var(--c1--2--); 
+    padding: 0.4rem 1.5rem; 
+    border-radius: 5px; 
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out; 
+    -o-transition: 0.5s ease-in-out;
+}
+
+.page-btn:hover {
+    color: goldenrod;
+    background: transparent;
+}
+/*End Button*/
+
+/*End navigation*/
+
+.hhead {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.hhead h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #3B1C32;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hhead .ul ul {
+    list-style: none;
+    padding: 0;
+}
+
+.hhead .ul ul li {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 30px;
+}
+
+.hhead .ul ul li::before {
+    content: "✔";
+    font-size: 1.2rem;
+    color: #3B1C32;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 4px;
+    font-weight: bold;
+}
+
+.hhead .ul ul li:hover {
+    color: #3B1C32;
+    transition: color 0.3s ease-in-out;
+}
+
+/*Popular Jewelry*/
+.popular-jewelry  {
+    background-color: #DDDDDD;
+}
+.popular-jewelry .flex:nth-of-type(odd) {
+    flex-wrap: wrap-reverse;
+}
+
+.popular-jewelry .flex+.flex {
+    padding-top: 4rem;
+}
+
+.popular-jewelry-content {
+    align-self: center;
+}
+
+.popular-jewelry-img {
+    position: relative;
+}
+
+.popular-jewelry-img::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    background-image: url(./logohero.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.popular-jewelry .flex:nth-of-type(2) .popular-jewelry-img::after {
+    top: 0;
+    bottom: auto;
+    left: auto;
+    right: 0;
+}
+
+.popular-jewelry-img img {
+    max-height: 600px;
+    object-fit: cover;
+}
+.containers {
+    max-width: 100%;
+}
+/*End Popular Jewelry*/
+h2 {
+    font-weight: 600;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    line-height: 125%;
+    text-transform: capitalize;
+}
+
+p {
+    font-size: clamp(1rem, 5vw, 1.5rem);
+    color: rgba(255, 255, 255);
+}
+
+/*Footer*/
+footer {
+    position: relative;
+    background: #30475E;
+}
+
+footer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./Screenshot_20241102_233019_Chrome-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
+
+.footer {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 4rem 0;
+}
+
+.footer-content {
+    max-width: 300px;
+}
+
+.footer-content p {
+    font-size: 1rem;
+}
+
+/* .media-links {
+    align-items: center;
+    gap: 2rem;
+} */
+
+/* .media-links a {
+    align-items: center;
+    justify-content: center;
+    width: 41px;
+    height: 40px;
+    background: rgba(30, 30, 30, 0.96); */
+    /* border: 1px solid var(--c1--2--); */
+    /* fill: var(--c1--1--);
+} */
+
+/* .media-links a:hover {
+    background: transparent;
+    fill: var(--c1--2--);
+} */
+
+h4 {
+    font-weight: 500;
+    font-size: clamp(1rem, 5vw, 1.5rem);
+    text-transform: uppercase;
+}
+
+footer ul {
+    list-style: none;
+    padding-top: 1.5rem;
+}
+
+footer li+li {
+    padding-top: 0.5rem;
+}
+
+footer ul a {
+    font-size: 1.125rem;
+    text-transform: capitalize;
+}
+
+footer ul a:hover {
+     color: #FFB200;
+}
+
+.copy-right {
+    background: var(--c1--2--);
+}
+
+.copy-right p {
+    font-size: 0.95rem;
+    color: var(--c1--1--);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.call {
+    max-width: 20px;
+}
+/*End Footer*/
+
+@media (min-width:1400px) {
+    .container {
+        max-width: 1300px;
+    }
+    .bullettouch {
+        margin-top: 13px;
+    }
+}
+
+@media (max-width:800px) {
+    .toggleMenu {
+        display: flex;
+        cursor: pointer;
+        background-color: transparent;
+        background-image: url(./images/hamburger.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 30px;
+        width: 30px;
+        height: 30px;
+        border: 0;
+        z-index: 1000;
+        transition: background-size 0.5s ease-in-out;
+        -webkit-transition: background-size 0.5s ease-in-out;
+        -moz-transition: background-size 0.5s ease-in-out;
+        -ms-transition: background-size 0.5s ease-in-out; 
+        -o-transition: background-size 0.5s ease-in-out;
+    }
+
+    .toggleMenu.active {
+        position: fixed;
+        right: 5%;
+        background-size: 25px;
+    }
+
+    nav {
+        position: absolute;
+        inset: 0;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 0;
+        opacity: 0;
+        transform: scale(0);
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0); 
+        -o-transform: scale(0);
+        transition: opacity 0.5s ease-in-out;
+        -webkit-transition: opacity 0.5s ease-in-out;
+        -moz-transition: opacity 0.5s ease-in-out;
+        -ms-transition: opacity 0.5s ease-in-out; 
+        -o-transition: opacity 0.5s ease-in-out;
+
+    }
+
+    nav.active {
+        position: fixed;
+        min-height: 100%;
+        opacity: 1;
+        /* background: var(--c1--1--); */
+        background: #DDDDDD;
+        z-index: 999;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1); 
+        -o-transform: scale(1);
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+}
+/*End Media*/
